@@ -32,3 +32,11 @@ A great test is not just good but is also the following:
     > Descriptive // 有具体的描述
     > Independent of other tests // 独立于其他的测试
     > Has no side-effects // 无副作用
+
+## Red,green,refactor
+1.写一个结果为失败的测试用例：
+> 写一个能满足需求的简短测试,执行并使其失败,如果该测试没有失败,那么其不足以测试需求,重写构建测试用例
+2.使测试通过
+> 使测试结果变绿(通过).做最简单的事情使其通过.不要紧张代码的混乱,你可以在下一步去整理
+3.重构代码
+> 停下来，慢慢的并且要抵抗住进行下一个功能的冲动。努力使你的代码 产品代码和测试代码尽可能的简洁
