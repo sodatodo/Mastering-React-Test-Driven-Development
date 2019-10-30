@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,10 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/runtime": "^7.6.3",
-    "jest": "^24.9.0"
+    "babel-loader": "^8.0.6",
+    "jest": "^24.9.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
   },
   "dependencies": {
     "react": "^16.11.0",

@@ -40,3 +40,9 @@ A great test is not just good but is also the following:
 > 使测试结果变绿(通过).做最简单的事情使其通过.不要紧张代码的混乱,你可以在下一步去整理
 3.重构代码
 > 停下来，慢慢的并且要抵抗住进行下一个功能的冲动。努力使你的代码 产品代码和测试代码尽可能的简洁
+
+## Putting it all together with webpack
+Jest包含Babel,可以在测试时将代码转换,但是当需要将代码生成用于在浏览器中显示时,就不再具有Jest的环境,因此需要用Webpack将代码进行转换
+``` bash
+npm install --save-dev webpack webpack-cli babel-loader
+```
