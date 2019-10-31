@@ -25,6 +25,9 @@ describe('AppointmentForm', () => {
     );
   }
 
+  const timeSlotTable = () =>
+    container.querySelector('table#time-slots');
+
   it('renders a form', () => {
     render(<AppointmentForm />);
     expect(form('appointment')).not.toBeNull();
@@ -82,5 +85,34 @@ describe('AppointmentForm', () => {
     })
 
   })
+
+
+  describe('time slot table', () => {
+    it('renders a table for time slots', () => {
+      render(<AppointmentForm />);
+      expect(
+        timeSlotTable()
+      ).not.toBeNull();
+    });
+
+    it('renders a time slot for every half an hour between open and close times', () => {
+      render(
+        <AppointmentForm salonOpensAt={9} salonClosesAt={11} />
+      );
+      const timeOfDay = timeSlotTable().querySelectorAll('tbody >* th');
+      expect(timeOfDay).toHaveLength(4);
+      expect(timeOfDay[0].textContent).toEqual('09:00');
+      expect(timeOfDay[1].textContent).toEqual('09:30');
+      expect(timeOfDay[3].textContent).toEqual('10:30');
+    })
+
+    it('renders an empty cell at the start of header row', () => {
+      render(<AppointmentForm />);
+      const headerRow = timeSlotTable().querySelector('thead > tr');
+      expect(headerRow.firstChild.textContent).toEqual('');
+    });
+
+  })
+  
   
 })
