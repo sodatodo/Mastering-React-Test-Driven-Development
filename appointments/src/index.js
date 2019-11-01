@@ -5,6 +5,7 @@ import { AppointmentsDayView } from './AppointmentsDayView';
 import { sampleAppointments } from './sampleData';
 
 import { CustomerForm } from './CustomerForm';
+import { AppointmentForm } from './AppointmentForm';
 
 // ReactDOM.render(
 //   <AppointmentsDayView appointments={sampleAppointments} />,
@@ -12,6 +13,6 @@ import { CustomerForm } from './CustomerForm';
 // );
 
 ReactDOM.render(
-  <CustomerForm />,
+  <AppointmentForm />,
   document.getElementById('root')
 )
