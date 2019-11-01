@@ -79,6 +79,15 @@ describe('AppointmentForm', () => {
       expect(option.selected).toBeTruthy();
     })
 
+    describe('time slot table', () => {
+      it('renders a table for time slots', () => {
+        render(<AppointmentForm />);
+        expect(
+          container.querySelector('table#time-slots')
+        ).not.toBeNull();
+      })
+    })
+    
   })
   
 })
